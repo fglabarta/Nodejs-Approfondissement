@@ -13,13 +13,28 @@ let Article;
 
 module.exports = Article = model("Article", articleSchema);
 
-/*async function test() {
+ async function test() {
   const articles = await Article.find().populate({
     path: "user",
     select: "-password",
-    match: { name: /ben/i },
+    match: { name: /ana/i },
   });
   console.log(articles.filter((article) => article.user));
 }
 
-test();*/
+test(); 
+
+/*
+async function test() {
+  const articles = await Article.find();
+  console.log(articles);
+  new Article({
+    title : "test",
+    content:"contenu",
+    user: "635ab191de7213accf200498"
+
+  }).save();
+  
+  console.log(articles.filter((article) => article.user));
+}
+test(); */

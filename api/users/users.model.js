@@ -8,15 +8,16 @@ const userSchema = Schema({
     type: String,
     required: [true, "Password is required"],
     minlength: 8,
+   
   },
   email: {
     type: String,
     required: true,
     unique: true,
-    /* validate: {
+     validate: {
       validator: isEmail,
       message: (props) => `${props.value} is not correct`,
-    },*/
+    }, 
   },
   date: {
     type: Date,

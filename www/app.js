@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 mongoose.connect(config.mongoUri);
 
 const db = mongoose.connection;
-
+//console.log(db);
 db.on("error", (err) => {
   console.log(err);
 });

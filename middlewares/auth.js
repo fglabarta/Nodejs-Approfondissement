@@ -4,6 +4,7 @@ const config = require("../config");
 
 module.exports = (req, res, next) => {
   try {
+    /**Par défaut le token c'est .headers["x-access-token"]; */
     const token = req.headers["x-access-token"];
     if (!token) {
       throw "not token";
